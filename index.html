@@ -3,7 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kuaför Erkan Kızılaslan</title>
+  <title>Kuaför Sefa Kızılaslan</title>
+
+  <script>
+    /* =========================================================
+       BURAYI DÜZENLEYEBİLİRSİN
+       Sadece aşağıdaki değerleri değiştirmen yeterli.
+       Diğer kodlara dokunma.
+    ========================================================== */
+    const SITE_DATA = {
+      prices: {
+        hair: 600,
+        beard: 300,
+        combo: 900
+      },
+      stats: {
+        rating: "4.8 puan",
+        reviewCount: "72 yorum",
+        instagramPosts: "158 Instagram gönderisi"
+      },
+      contact: {
+        phoneDisplay: "0546 228 40 72",
+        phoneLink: "905462284072",
+        instagram: "kuaforerkaan",
+        appointmentUrl: "https://apps.apple.com/tr/app/stylett/id6759827060?l=tr",
+        address: "Orhangazi, Rüzgargülü Sokağı No:10, 34903 Pendik / İstanbul",
+        mapsQuery: "Orhangazi Rüzgargülü Sokağı No:10 34903 Pendik İstanbul"
+      }
+    };
+    /* =========================================================
+       YUKARIYI DÜZENLEYEBİLİRSİN
+       Sadece aşağıdaki değerleri değiştirmen yeterli.
+       Diğer kodlara dokunma.
+    ========================================================== */
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -423,6 +456,8 @@
         padding:0;
       }
 
+      .meta-row{gap:.5rem}
+      .meta-pill{font-size:.72rem;padding:.6rem .75rem}
       .whatsapp-float a span{display:none}
     }
 
@@ -452,10 +487,10 @@
     <div class="container nav">
       <div class="brand">
         <div class="logo" aria-hidden="true">
-          <img src="./foto4.jpg" alt="Kuaför Erkan Kızılaslan logosu" width="1080" height="720" loading="eager">
+          <img src="./foto4.jpg" alt="Kuaför Sefa Kızılaslan logosu" width="1080" height="720" loading="eager">
         </div>
         <div class="brand-text">
-          <strong>Kuaför Erkan Kızılaslan</strong>
+          <strong>Kuaför Sefa Kızılaslan</strong>
           <span>Pendik / İstanbul</span>
         </div>
       </div>
@@ -480,38 +515,38 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="tel:05462284072">0546 228 40 72</a>
-            <a class="btn-ghost" href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="btn-ghost" href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Randevu Al</a>
-            <a class="btn-ghost" href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn" data-phone-link href="#">Telefon</a>
+            <a class="btn-ghost" data-whatsapp-link href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn-ghost" data-appointment-link href="#" target="_blank" rel="noopener noreferrer">Randevu Al</a>
+            <a class="btn-ghost" data-instagram-link href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
 
           <div class="meta-row" style="margin-top:1.25rem">
-            <span class="meta-pill">Google’da yüksek memnuniyet</span>
-            <span class="meta-pill">Hızlı iletişim</span>
-            <span class="meta-pill">Instagram’da güncel paylaşımlar</span>
+            <span class="meta-pill" data-stat="rating"></span>
+            <span class="meta-pill" data-stat="reviewCount"></span>
+            <span class="meta-pill" data-stat="instagramPosts"></span>
           </div>
         </article>
 
         <aside class="hero-side">
           <section class="card mini">
             <h3>Adres</h3>
-            <p class="muted">Orhangazi, Rüzgargülü Sokağı No:10, 34903 Pendik / İstanbul</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Orhangazi%20R%C3%BCzgarg%C3%BCl%C3%BC%20Soka%C4%9F%C4%B1%20No%3A10%2034903%20Pendik%20%C4%B0stanbul" target="_blank" rel="noopener noreferrer">Yol tarifi al</a>
+            <p class="muted" data-address-text></p>
+            <a data-maps-link href="#" target="_blank" rel="noopener noreferrer">Yol tarifi al</a>
           </section>
 
           <section class="card mini">
             <h3>Sosyal medya</h3>
             <p class="muted">Güncel kesimler, videolar ve salon paylaşımları için resmi hesabı ziyaret edebilirsiniz.</p>
-            <a href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">@kuaforerkaan</a>
+            <a data-instagram-link-text href="#" target="_blank" rel="noopener noreferrer">@instagram</a>
           </section>
 
           <section class="card mini">
             <h3>Hızlı iletişim</h3>
             <div class="contact-actions">
-              <a class="btn" href="tel:05462284072">Telefon</a>
-              <a class="btn-ghost" href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer">Mesaj Gönder</a>
-              <a class="btn-ghost" href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Randevu</a>
+              <a class="btn" data-phone-link href="#">Telefon</a>
+              <a class="btn-ghost" data-whatsapp-link href="#" target="_blank" rel="noopener noreferrer">Mesaj Gönder</a>
+              <a class="btn-ghost" data-appointment-link href="#" target="_blank" rel="noopener noreferrer">Randevu</a>
             </div>
           </section>
         </aside>
@@ -554,15 +589,15 @@
 
         <div class="gallery-grid">
           <figure class="card gallery-card" data-label="Dış görünüm">
-            <img src="./foto2.jpg" alt="Kuaför Erkan Kızılaslan dış cephe görünümü" width="1360" height="1020" loading="lazy" />
+            <img src="./foto2.jpg" alt="Kuaför Sefa Kızılaslan dış cephe görünümü" width="1360" height="1020" loading="lazy" />
           </figure>
 
           <figure class="card gallery-card" data-label="Bekleme alanı">
-            <img src="./foto1.jpg" alt="Kuaför Erkan Kızılaslan bekleme alanı" width="574" height="1020" loading="lazy" />
+            <img src="./foto1.jpg" alt="Kuaför Sefa Kızılaslan bekleme alanı" width="574" height="1020" loading="lazy" />
           </figure>
 
           <figure class="card gallery-card" data-label="Salon içi">
-            <img src="./foto3.jpg" alt="Kuaför Erkan Kızılaslan salon içi koltuk alanı" width="766" height="1024" loading="lazy" />
+            <img src="./foto3.jpg" alt="Kuaför Sefa Kızılaslan salon içi koltuk alanı" width="766" height="1024" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -577,19 +612,19 @@
         <div class="pricing-grid">
           <article class="card price-card">
             <h3>Saç kesimi</h3>
-            <div class="price">600 TL</div>
+            <div class="price" data-price="hair"></div>
             <p>Temiz ve özenli saç kesimi hizmeti.</p>
           </article>
 
           <article class="card price-card">
             <h3>Sakal kesimi</h3>
-            <div class="price">300 TL</div>
+            <div class="price" data-price="beard"></div>
             <p>Yüz tipine uygun düzenleme ve şekillendirme.</p>
           </article>
 
           <article class="card price-card">
             <h3>Saç + sakal kesimi</h3>
-            <div class="price">900 TL</div>
+            <div class="price" data-price="combo"></div>
             <p>Birlikte tercih edilen kapsamlı bakım paketi.</p>
           </article>
         </div>
@@ -655,44 +690,90 @@
         <article class="card contact-card">
           <h3>İletişim bilgileri</h3>
           <div class="contact-list">
-            <span>Telefon: <a href="tel:05462284072">0546 228 40 72</a></span>
-            <span>Instagram: <a href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">@kuaforerkaan</a></span>
-            <span>Randevu: <a href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Stylett üzerinden oluştur</a></span>
-            <span>Adres: Orhangazi, Rüzgargülü Sokağı No:10, 34903 Pendik / İstanbul</span>
+            <span>Telefon: <a data-phone-link-text href="#"></a></span>
+            <span>Instagram: <a data-instagram-link-text href="#" target="_blank" rel="noopener noreferrer"></a></span>
+            <span>Randevu: <a data-appointment-link href="#" target="_blank" rel="noopener noreferrer">Stylett üzerinden oluştur</a></span>
+            <span>Adres: <span data-address-text></span></span>
           </div>
 
           <div class="contact-actions" style="margin-top:1rem">
-            <a class="btn" href="tel:05462284072">Hemen Ara</a>
-            <a class="btn-ghost" href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer">WhatsApp Aç</a>
-            <a class="btn-ghost" href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Stylett Randevu</a>
+            <a class="btn" data-phone-link href="#">Hemen Ara</a>
+            <a class="btn-ghost" data-whatsapp-link href="#" target="_blank" rel="noopener noreferrer">WhatsApp Aç</a>
+            <a class="btn-ghost" data-appointment-link href="#" target="_blank" rel="noopener noreferrer">Stylett Randevu</a>
           </div>
         </article>
 
         <article class="card contact-card">
           <h3>Konum</h3>
           <iframe
-            title="Kuaför Erkan Kızılaslan konumu"
+            data-map-embed
+            title="Kuaför Sefa Kızılaslan konumu"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Orhangazi%20R%C3%BCzgarg%C3%BCl%C3%BC%20Soka%C4%9F%C4%B1%20No%3A10%20Pendik%20Istanbul&output=embed"></iframe>
+            src=""></iframe>
         </article>
       </div>
     </section>
   </main>
 
   <div class="whatsapp-float">
-    <a href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişim kur">
+    <a data-whatsapp-link href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişim kur">
       <span>WhatsApp</span>
     </a>
   </div>
 
   <footer class="footer">
     <div class="container footer-box">
-      <span>© 2026 Kuaför Erkan Kızılaslan</span>
+      <span>© 2026 Kuaför Sefa Kızılaslan</span>
     </div>
   </footer>
 
   <script>
+    function formatTL(value){
+      return `${value} TL`;
+    }
+
+    function setText(selector, value){
+      document.querySelectorAll(selector).forEach(el => {
+        el.textContent = value;
+      });
+    }
+
+    function setHref(selector, value){
+      document.querySelectorAll(selector).forEach(el => {
+        el.setAttribute('href', value);
+      });
+    }
+
+    document.querySelectorAll('[data-price]').forEach(el => {
+      const key = el.dataset.price;
+      if (SITE_DATA.prices[key] != null) {
+        el.textContent = formatTL(SITE_DATA.prices[key]);
+      }
+    });
+
+    document.querySelectorAll('[data-stat]').forEach(el => {
+      const key = el.dataset.stat;
+      if (SITE_DATA.stats[key] != null) {
+        el.textContent = SITE_DATA.stats[key];
+      }
+    });
+
+    setText('[data-address-text]', SITE_DATA.contact.address);
+    setText('[data-phone-link-text]', SITE_DATA.contact.phoneDisplay);
+    setText('[data-instagram-link-text]', '@' + SITE_DATA.contact.instagram);
+
+    setHref('[data-phone-link]', 'tel:' + SITE_DATA.contact.phoneLink);
+    setHref('[data-whatsapp-link]', 'https://wa.me/' + SITE_DATA.contact.phoneLink);
+    setHref('[data-appointment-link]', SITE_DATA.contact.appointmentUrl);
+    setHref('[data-instagram-link]', 'https://www.instagram.com/' + SITE_DATA.contact.instagram + '/');
+    setHref('[data-instagram-link-text]', 'https://www.instagram.com/' + SITE_DATA.contact.instagram + '/');
+    setHref('[data-maps-link]', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(SITE_DATA.contact.mapsQuery));
+
+    document.querySelectorAll('[data-map-embed]').forEach(el => {
+      el.src = 'https://www.google.com/maps?q=' + encodeURIComponent(SITE_DATA.contact.mapsQuery) + '&output=embed';
+    });
+
     (function(){
       const root = document.documentElement;
       const btn = document.querySelector('[data-theme-toggle]');
