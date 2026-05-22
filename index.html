@@ -177,14 +177,6 @@
                  linear-gradient(180deg, transparent, var(--overlay));
       z-index:-1;
     }
-    .eyebrow{
-      display:inline-flex;gap:.5rem;align-items:center;
-      padding:.45rem .8rem;border-radius:var(--radius-full);
-      background:var(--color-surface-2);
-      border:1px solid var(--color-border);
-      font-size:var(--text-xs);color:var(--color-text-muted);
-      margin-bottom:1rem;
-    }
     h1{
       margin:0 0 1rem;
       font-family:var(--font-display);
@@ -241,7 +233,7 @@
     .reviews-wrap{overflow:hidden;position:relative}
     .reviews-track{
       display:flex;gap:1rem;width:max-content;
-      animation:marquee 32s linear infinite;
+      animation:marquee 38s linear infinite;
     }
     .reviews-wrap:hover .reviews-track{animation-play-state:paused}
     .review-card{width:min(340px,78vw);padding:1.2rem}
@@ -282,7 +274,6 @@
       .gallery-grid{grid-template-columns:1fr}
       .container{width:min(100% - 1rem, 1160px)}
       .nav-links{display:grid;grid-template-columns:1fr 1fr}
-      .nav-links .btn{grid-column:span 2}
       .whatsapp-float a span{display:none}
     }
     @media (prefers-reduced-motion: reduce){
@@ -326,6 +317,9 @@
       <div class="container hero-wrap">
         <article class="card hero-main">
           <h1>Stil sahibi kesimler, güçlü görünüm, hızlı randevu.</h1>
+          <p class="hero-text">
+            Pendik’te özenli saç ve sakal uygulamaları, temiz salon deneyimi ve hızlı iletişim imkânı ile modern erkek bakımına odaklanan bir kuaför deneyimi.
+          </p>
           <div class="hero-actions">
             <a class="btn" href="tel:05462284072">0546 228 40 72</a>
             <a class="btn-ghost" href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -333,9 +327,9 @@
             <a class="btn-ghost" href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
           <div class="meta-row" style="margin-top:1.25rem">
-            <span class="meta-pill">4.8 puan</span>
-            <span class="meta-pill">72 yorum</span>
-            <span class="meta-pill">158 Instagram gönderisi</span>
+            <span class="meta-pill">Google’da yüksek memnuniyet</span>
+            <span class="meta-pill">Hızlı iletişim</span>
+            <span class="meta-pill">Instagram’da güncel paylaşımlar</span>
           </div>
         </article>
 
@@ -347,7 +341,7 @@
           </section>
           <section class="card mini">
             <h3>Sosyal medya</h3>
-            <p class="muted">Resmi hesap üzerinden güncel kesimler, videolar ve dönüşüm paylaşımları görülebilir.</p>
+            <p class="muted">Güncel kesimler, videolar ve salon paylaşımları için resmi hesabı ziyaret edebilirsiniz.</p>
             <a href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">@kuaforerkaan</a>
           </section>
           <section class="card mini">
@@ -373,17 +367,17 @@
           <article class="card service-card">
             <div class="service-icon">✂</div>
             <h3>Saç kesim</h3>
-            <p class="muted">Yüz tipine uygun modern ve klasik kesim seçenekleri.</p>
+            <p class="muted">Yüz tipine ve günlük kullanıma uygun modern ya da klasik kesim seçenekleri.</p>
           </article>
           <article class="card service-card">
             <div class="service-icon">✦</div>
-            <h3>Fön & şekillendirme</h3>
-            <p class="muted">Günlük kullanım ve özel günler için özenli son dokunuşlar.</p>
+            <h3>Sakal düzenleme</h3>
+            <p class="muted">Yüz hattına uyum sağlayan özenli sakal şekillendirme ve toparlama uygulamaları.</p>
           </article>
           <article class="card service-card">
             <div class="service-icon">★</div>
             <h3>Bakım uygulamaları</h3>
-            <p class="muted">Saç görünümünü destekleyen bakım ve yenileme odaklı işlemler.</p>
+            <p class="muted">Saç ve görünüm kalitesini destekleyen bakım odaklı tamamlayıcı işlemler.</p>
           </article>
         </div>
       </div>
@@ -454,23 +448,32 @@
           <div class="reviews-track">
             <article class="card review-card">
               <div class="stars">★★★★★</div>
-              <h3>Temiz ve özenli hizmet</h3>
-              <p class="muted">Salon düzeni, ilgi ve sonuç gerçekten çok başarılıydı.</p>
+              <h3>İlk ziyarette güven veren hizmet</h3>
+              <p class="muted">İlk kez gelen misafirlerin bile rahat ettiği, ne istediğini kısa anlatınca doğru sonuca ulaşabildiği bir deneyim.</p>
             </article>
+
             <article class="card review-card">
               <div class="stars">★★★★★</div>
-              <h3>İstediğim modele yakın çalışma</h3>
-              <p class="muted">Yüz tipime göre öneri sunulması ayrıca güven verdi.</p>
+              <h3>Özenli kesim, temiz ortam</h3>
+              <p class="muted">Kesim sürecinde detaylara dikkat edilen, temiz ve sakin atmosferiyle memnuniyet oluşturan bir salon deneyimi.</p>
             </article>
+
             <article class="card review-card">
               <div class="stars">★★★★★</div>
-              <h3>Hızlı randevu dönüşü</h3>
-              <p class="muted">Telefonla ulaşıp kısa sürede bilgi alabildim, memnun kaldım.</p>
+              <h3>Samimi yaklaşım</h3>
+              <p class="muted">Misafirlerle yakından ilgilenilen, iletişimi güçlü ve kendini rahat hissettiren sıcak bir karşılama öne çıkıyor.</p>
             </article>
+
             <article class="card review-card">
               <div class="stars">★★★★★</div>
-              <h3>Modern ve düzgün kesim</h3>
-              <p class="muted">İşçilik ve son görünüm beklentimin üstündeydi.</p>
+              <h3>Uzak semtlerden gelen memnuniyet</h3>
+              <p class="muted">Farklı bölgelerden gelen ziyaretçilerin de hizmet kalitesi ve ortaya çıkan sonuçtan memnun ayrıldığı görülüyor.</p>
+            </article>
+
+            <article class="card review-card">
+              <div class="stars">★★★★★</div>
+              <h3>Uzun süreli müşteri memnuniyeti</h3>
+              <p class="muted">Düzenli gelen müşteriler tarafından istikrarlı kalite, özenli işçilik ve güven veren hizmet anlayışı vurgulanıyor.</p>
             </article>
           </div>
         </div>
@@ -515,17 +518,20 @@
 
   <script>
     (function(){
-      const root=document.documentElement;
-      const btn=document.querySelector('[data-theme-toggle]');
-      let theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-      const setTheme=()=>{
-        root.setAttribute('data-theme',theme);
-        btn.textContent=theme==='dark'?'☀':'☾';
-        btn.setAttribute('aria-label',theme==='dark'?'Açık temaya geç':'Koyu temaya geç');
+      const root = document.documentElement;
+      const btn = document.querySelector('[data-theme-toggle]');
+      let theme = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+      const setTheme = () => {
+        root.setAttribute('data-theme', theme);
+        btn.textContent = theme === 'dark' ? '☀' : '☾';
+        btn.setAttribute('aria-label', theme === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç');
       };
+
       setTheme();
-      btn.addEventListener('click',()=>{
-        theme=theme==='dark'?'light':'dark';
+
+      btn.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
         setTheme();
       });
     })();
