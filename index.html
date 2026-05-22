@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kuaför Erkan Kızılaslan</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root, [data-theme="light"] {
       --text-xs: clamp(.75rem,.7rem + .25vw,.875rem);
@@ -38,6 +40,7 @@
       --shadow-lg:0 20px 60px rgba(29,21,15,.14);
       --overlay:rgba(250,247,242,.7);
     }
+
     [data-theme="dark"] {
       --color-bg:#090b10;
       --color-surface:#10131a;
@@ -63,6 +66,7 @@
       color:var(--color-text);
       overflow-x:hidden;
     }
+
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%;height:auto}
     button,input,textarea{font:inherit}
@@ -75,19 +79,26 @@
     }
 
     body::before,body::after{
-      content:"";position:fixed;pointer-events:none;z-index:-3;
-      filter:blur(70px);opacity:.45;
+      content:"";
+      position:fixed;
+      pointer-events:none;
+      z-index:-3;
+      filter:blur(70px);
+      opacity:.45;
       animation:floatGlow 18s ease-in-out infinite alternate;
     }
+
     body::before{
       width:34rem;height:34rem;top:-9rem;right:-8rem;
       background:radial-gradient(circle,var(--color-primary),transparent 60%);
     }
+
     body::after{
       width:28rem;height:28rem;left:-8rem;bottom:2rem;
       background:radial-gradient(circle,var(--color-primary-2),transparent 62%);
       animation-duration:22s;
     }
+
     .animated-grid{
       position:fixed;inset:0;z-index:-4;pointer-events:none;
       background:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
@@ -97,86 +108,135 @@
       opacity:.55;
       animation:gridShift 24s linear infinite;
     }
+
     [data-theme="light"] .animated-grid{
       background:linear-gradient(rgba(0,0,0,.045) 1px, transparent 1px),
                  linear-gradient(90deg, rgba(0,0,0,.045) 1px, transparent 1px);
     }
 
-    @keyframes floatGlow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(0,22px,0) scale(1.1)}}
-    @keyframes gridShift{from{transform:translateY(0)}to{transform:translateY(42px)}}
-    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes floatGlow{
+      from{transform:translate3d(0,0,0) scale(1)}
+      to{transform:translate3d(0,22px,0) scale(1.1)}
+    }
+
+    @keyframes gridShift{
+      from{transform:translateY(0)}
+      to{transform:translateY(42px)}
+    }
+
+    @keyframes marquee{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
 
     .container{width:min(1160px,calc(100% - 2rem));margin-inline:auto}
+
     .card{
       background:color-mix(in srgb, var(--color-surface) 88%, transparent);
       border:1px solid var(--color-border);
       border-radius:var(--radius-xl);
       box-shadow:var(--shadow-lg);
     }
+
     .section{padding:clamp(1rem,3vw,2rem) 0}
+
     .section-head{
-      display:flex;justify-content:space-between;align-items:end;
-      gap:1rem;margin-bottom:1rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:1rem;
+      margin-bottom:1rem;
     }
+
     .section-head h2{margin:0;font-size:var(--text-lg)}
     .muted{color:var(--color-text-muted)}
 
     .site-header{
-      position:sticky;top:0;z-index:30;
+      position:sticky;
+      top:0;
+      z-index:30;
       background:color-mix(in srgb, var(--color-bg) 70%, transparent);
       backdrop-filter:blur(16px);
       border-bottom:1px solid var(--color-border);
     }
+
     .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:1rem;padding:.95rem 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:.95rem 0;
     }
+
     .brand{display:flex;align-items:center;gap:.9rem}
+
     .logo{
       width:56px;height:56px;border-radius:16px;
       overflow:hidden;border:1px solid var(--color-border);
       background:#000;display:grid;place-items:center;
       box-shadow:var(--shadow-lg);
     }
+
     .logo img{width:100%;height:100%;object-fit:cover}
     .brand-text strong{display:block;line-height:1.1}
     .brand-text span{display:block;color:var(--color-text-muted);font-size:var(--text-xs)}
 
     .nav-links{
-      display:flex;gap:.75rem;flex-wrap:wrap;
+      display:flex;
+      gap:.75rem;
+      flex-wrap:wrap;
     }
+
     .nav-links a,.theme-toggle,.btn,.btn-ghost{
-      min-height:44px;border-radius:var(--radius-full);
-      display:inline-flex;align-items:center;justify-content:center;
+      min-height:44px;
+      border-radius:var(--radius-full);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding:.8rem 1rem;
-      transition:transform .22s cubic-bezier(.16,1,.3,1),
-                 background .22s,border-color .22s;
+      transition:transform .22s cubic-bezier(.16,1,.3,1), background .22s,border-color .22s;
     }
+
     .nav-links a,.theme-toggle,.btn-ghost{
       background:var(--color-surface);
       border:1px solid var(--color-border);
     }
+
     .btn{
       background:linear-gradient(135deg,var(--color-primary),var(--color-primary-2));
-      color:#111;font-weight:800;border:none;
+      color:#111;
+      font-weight:800;
+      border:none;
     }
+
     .theme-toggle{width:44px;padding:0;color:var(--color-text)}
     .nav-links a:hover,.theme-toggle:hover,.btn:hover,.btn-ghost:hover{transform:translateY(-1px)}
 
     .hero{padding:clamp(4rem,9vw,8rem) 0 2rem}
+
     .hero-wrap{
-      display:grid;grid-template-columns:1.1fr .9fr;
-      gap:1rem;align-items:stretch;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:1rem;
+      align-items:stretch;
     }
+
     .hero-main,.hero-side{
-      padding:clamp(1.35rem,4vw,2.6rem);position:relative;overflow:hidden;
+      padding:clamp(1.35rem,4vw,2.6rem);
+      position:relative;
+      overflow:hidden;
     }
+
     .hero-main::before{
-      content:"";position:absolute;inset:0;
-      background:radial-gradient(circle at 86% 18%, color-mix(in srgb, var(--color-primary) 28%, transparent), transparent 24%),
-                 linear-gradient(180deg, transparent, var(--overlay));
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 86% 18%, color-mix(in srgb, var(--color-primary) 28%, transparent), transparent 24%),
+        linear-gradient(180deg, transparent, var(--overlay));
       z-index:-1;
     }
+
     h1{
       margin:0 0 1rem;
       font-family:var(--font-display);
@@ -184,147 +244,207 @@
       line-height:1.05;
       max-width:10ch;
     }
-    .hero-text{max-width:56ch;color:var(--color-text-muted);margin:0 0 1.5rem}
-    .hero-actions,.meta-row,.contact-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+
+    .hero-text{
+      max-width:56ch;
+      color:var(--color-text-muted);
+      margin:0 0 1.5rem;
+    }
+
+    .hero-actions,.meta-row,.contact-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.75rem;
+    }
+
     .meta-pill{
-      padding:.72rem .95rem;border-radius:var(--radius-full);
+      padding:.72rem .95rem;
+      border-radius:var(--radius-full);
       background:var(--color-surface-2);
       border:1px solid var(--color-border);
       font-size:var(--text-sm);
     }
+
     .hero-side{display:grid;gap:1rem}
     .mini{padding:1.2rem}
     .mini h3{margin:.2rem 0 .45rem;font-size:1rem}
     .mini a{color:var(--color-primary);font-weight:700}
 
-    .service-grid,.gallery-grid,.pricing-grid,.contact-grid{display:grid;gap:1rem}
+    .service-grid,.gallery-grid,.pricing-grid,.contact-grid{
+      display:grid;
+      gap:1rem;
+    }
+
     .service-grid{grid-template-columns:repeat(3,1fr)}
     .gallery-grid{grid-template-columns:repeat(3,1fr)}
     .pricing-grid{grid-template-columns:repeat(3,1fr)}
     .contact-grid{grid-template-columns:1fr 1fr}
+
     .service-card,.gallery-card,.price-card,.contact-card{padding:1.25rem}
+
     .service-icon{
       width:42px;height:42px;border-radius:12px;
       display:grid;place-items:center;
       background:color-mix(in srgb, var(--color-primary) 18%, var(--color-surface));
-      border:1px solid var(--color-border);color:var(--color-primary);
+      border:1px solid var(--color-border);
+      color:var(--color-primary);
     }
-    .service-card h3,.price-card h3,.contact-card h3{margin:.75rem 0 .5rem;font-size:1.05rem}
+
+    .service-card h3,.price-card h3,.contact-card h3{
+      margin:.75rem 0 .5rem;
+      font-size:1.05rem;
+    }
 
     .gallery-card{
-      padding:0;overflow:hidden;min-height:240px;position:relative;
+      padding:0;
+      overflow:hidden;
+      min-height:240px;
+      position:relative;
     }
+
     .gallery-card img{
-      width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      aspect-ratio:4/5;
     }
+
     .gallery-card::after{
-      content:attr(data-label);position:absolute;left:1rem;bottom:1rem;
-      padding:.55rem .8rem;border-radius:var(--radius-full);
-      background:rgba(0,0,0,.46);backdrop-filter:blur(8px);
-      font-size:var(--text-xs);color:#fff;
+      content:attr(data-label);
+      position:absolute;
+      left:1rem;
+      bottom:1rem;
+      padding:.55rem .8rem;
+      border-radius:var(--radius-full);
+      background:rgba(0,0,0,.46);
+      backdrop-filter:blur(8px);
+      font-size:var(--text-xs);
+      color:#fff;
     }
 
     .price-card .price{
-      font-size:1.4rem;font-weight:800;
-      color:var(--color-primary);margin:.15rem 0 .5rem;
+      font-size:1.4rem;
+      font-weight:800;
+      color:var(--color-primary);
+      margin:.15rem 0 .5rem;
     }
+
     .price-card p{margin:0;color:var(--color-text-muted)}
 
     .reviews-wrap{overflow:hidden;position:relative}
+
     .reviews-track{
-      display:flex;gap:1rem;width:max-content;
+      display:flex;
+      gap:1rem;
+      width:max-content;
       animation:marquee 38s linear infinite;
     }
+
     .reviews-wrap:hover .reviews-track{animation-play-state:paused}
-    .review-card{width:min(340px,78vw);padding:1.2rem}
+
+    .review-card{
+      width:min(340px,78vw);
+      padding:1.2rem;
+    }
+
     .review-card h3{margin:0 0 .35rem;font-size:1rem}
     .stars{color:var(--color-primary);letter-spacing:2px;font-size:.95rem;margin-bottom:.5rem}
 
     .contact-card iframe{
-      width:100%;height:260px;border:0;
-      border-radius:1rem;filter:grayscale(.2) contrast(1.05);
+      width:100%;
+      height:260px;
+      border:0;
+      border-radius:1rem;
+      filter:grayscale(.2) contrast(1.05);
     }
+
     .contact-list{display:grid;gap:.6rem;color:var(--color-text-muted)}
 
     .whatsapp-float{
-      position:fixed;right:1rem;bottom:1rem;z-index:35;
+      position:fixed;
+      right:1rem;
+      bottom:1rem;
+      z-index:35;
     }
+
     .whatsapp-float a{
-      min-width:44px;min-height:44px;border-radius:999px;
-      padding:.95rem 1.1rem;background:#25d366;color:#0b0c10;
-      font-weight:800;display:inline-flex;align-items:center;
-      gap:.55rem;box-shadow:var(--shadow-lg);
+      min-width:44px;
+      min-height:44px;
+      border-radius:999px;
+      padding:.95rem 1.1rem;
+      background:#25d366;
+      color:#0b0c10;
+      font-weight:800;
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      box-shadow:var(--shadow-lg);
     }
 
     .footer{padding:2rem 0 3rem;color:var(--color-text-muted)}
+
     .footer-box{
-      display:flex;justify-content:space-between;
-      gap:1rem;flex-wrap:wrap;padding-top:1rem;
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      padding-top:1rem;
       border-top:1px solid var(--color-border);
     }
 
-@media (max-width: 980px){
-  .hero-wrap,.contact-grid,.service-grid,.pricing-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  h1{max-width:unset}
-  .nav{flex-direction:column;align-items:flex-start}
-  .nav-links{width:100%}
-}
+    @media (max-width: 980px){
+      .hero-wrap,.contact-grid,.service-grid,.pricing-grid{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:1fr 1fr}
+      h1{max-width:unset}
+      .nav{flex-direction:column;align-items:flex-start}
+      .nav-links{width:100%}
+    }
 
-@media (max-width: 980px){
-  .hero-wrap,.contact-grid,.service-grid,.pricing-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  h1{max-width:unset}
-  .nav{flex-direction:column;align-items:flex-start}
-  .nav-links{width:100%}
-}
+    @media (max-width: 640px){
+      .gallery-grid{grid-template-columns:1fr}
+      .container{width:min(100% - 1rem, 1160px)}
 
-@media (max-width: 640px){
-  .gallery-grid{grid-template-columns:1fr}
-  .container{width:min(100% - 1rem, 1160px)}
+      .nav-links{
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:.45rem;
+      }
 
-  .nav-links{
-    display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:.45rem;
-  }
+      .nav-links a,
+      .theme-toggle{
+        min-height:36px;
+        padding:.5rem .35rem;
+        font-size:.76rem;
+        border-radius:12px;
+      }
 
-  .nav-links a,
-  .theme-toggle{
-    min-height:36px;
-    padding:.5rem .35rem;
-    font-size:.76rem;
-    border-radius:12px;
-  }
+      .theme-toggle{
+        width:100%;
+        padding:0;
+      }
 
-  .theme-toggle{
-    width:100%;
-    padding:0;
-  }
+      .whatsapp-float a span{display:none}
+    }
 
-  .whatsapp-float a span{display:none}
-}
+    @media (max-width: 420px){
+      .nav-links a,
+      .theme-toggle{
+        min-height:34px;
+        font-size:.72rem;
+        padding:.45rem .3rem;
+      }
+    }
 
-@media (max-width: 420px){
-  .nav-links a,
-  .theme-toggle{
-    min-height:34px;
-    font-size:.72rem;
-    padding:.45rem .3rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{
-    animation:none !important;
-    transition:none !important;
-    scroll-behavior:auto !important;
-  }
-}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#icerik">İçeriğe geç</a>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
   <div class="animated-grid" aria-hidden="true"></div>
 
@@ -332,15 +452,14 @@
     <div class="container nav">
       <div class="brand">
         <div class="logo" aria-hidden="true">
-          <img src="./foto4.jpg"
-               alt="Kuaför Erkan Kızılaslan logosu"
-               width="1080" height="720" loading="eager">
+          <img src="./foto4.jpg" alt="Kuaför Erkan Kızılaslan logosu" width="1080" height="720" loading="eager">
         </div>
         <div class="brand-text">
           <strong>Kuaför Erkan Kızılaslan</strong>
           <span>Pendik / İstanbul</span>
         </div>
       </div>
+
       <nav class="nav-links" aria-label="Ana menü">
         <a href="#hizmetler">Hizmetler</a>
         <a href="#galeri">Galeri</a>
@@ -359,12 +478,14 @@
           <p class="hero-text">
             Pendik’te özenli saç ve sakal uygulamaları, temiz salon deneyimi ve hızlı iletişim imkânı ile modern erkek bakımına odaklanan bir kuaför deneyimi.
           </p>
+
           <div class="hero-actions">
             <a class="btn" href="tel:05462284072">0546 228 40 72</a>
             <a class="btn-ghost" href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <a class="btn-ghost" href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Randevu Al</a>
             <a class="btn-ghost" href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
+
           <div class="meta-row" style="margin-top:1.25rem">
             <span class="meta-pill">Google’da yüksek memnuniyet</span>
             <span class="meta-pill">Hızlı iletişim</span>
@@ -378,11 +499,13 @@
             <p class="muted">Orhangazi, Rüzgargülü Sokağı No:10, 34903 Pendik / İstanbul</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Orhangazi%20R%C3%BCzgarg%C3%BCl%C3%BC%20Soka%C4%9F%C4%B1%20No%3A10%2034903%20Pendik%20%C4%B0stanbul" target="_blank" rel="noopener noreferrer">Yol tarifi al</a>
           </section>
+
           <section class="card mini">
             <h3>Sosyal medya</h3>
             <p class="muted">Güncel kesimler, videolar ve salon paylaşımları için resmi hesabı ziyaret edebilirsiniz.</p>
             <a href="https://www.instagram.com/kuaforerkaan/" target="_blank" rel="noopener noreferrer">@kuaforerkaan</a>
           </section>
+
           <section class="card mini">
             <h3>Hızlı iletişim</h3>
             <div class="contact-actions">
@@ -398,21 +521,22 @@
     <section class="section" id="hizmetler">
       <div class="container">
         <div class="section-head">
-          <div>
-            <h2>Hizmetler</h2>
-          </div>
+          <div><h2>Hizmetler</h2></div>
         </div>
+
         <div class="service-grid">
           <article class="card service-card">
             <div class="service-icon">✂</div>
             <h3>Saç kesim</h3>
             <p class="muted">Yüz tipine ve günlük kullanıma uygun modern ya da klasik kesim seçenekleri.</p>
           </article>
+
           <article class="card service-card">
             <div class="service-icon">✦</div>
             <h3>Sakal düzenleme</h3>
             <p class="muted">Yüz hattına uyum sağlayan özenli sakal şekillendirme ve toparlama uygulamaları.</p>
           </article>
+
           <article class="card service-card">
             <div class="service-icon">★</div>
             <h3>Bakım uygulamaları</h3>
@@ -425,25 +549,20 @@
     <section class="section" id="galeri">
       <div class="container">
         <div class="section-head">
-          <div>
-            <h2>Galeri</h2>
-          </div>
+          <div><h2>Galeri</h2></div>
         </div>
+
         <div class="gallery-grid">
           <figure class="card gallery-card" data-label="Dış görünüm">
-            <img src="./foto2.jpg"
-                 alt="Kuaför Erkan Kızılaslan dış cephe görünümü"
-                 width="1360" height="1020" loading="lazy" />
+            <img src="./foto2.jpg" alt="Kuaför Erkan Kızılaslan dış cephe görünümü" width="1360" height="1020" loading="lazy" />
           </figure>
+
           <figure class="card gallery-card" data-label="Bekleme alanı">
-            <img src="./foto1.jpg"
-                 alt="Kuaför Erkan Kızılaslan bekleme alanı"
-                 width="574" height="1020" loading="lazy" />
+            <img src="./foto1.jpg" alt="Kuaför Erkan Kızılaslan bekleme alanı" width="574" height="1020" loading="lazy" />
           </figure>
+
           <figure class="card gallery-card" data-label="Salon içi">
-            <img src="./foto3.jpg"
-                 alt="Kuaför Erkan Kızılaslan salon içi koltuk alanı"
-                 width="766" height="1024" loading="lazy" />
+            <img src="./foto3.jpg" alt="Kuaför Erkan Kızılaslan salon içi koltuk alanı" width="766" height="1024" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -452,21 +571,22 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <div>
-            <h2>Fiyat alanı</h2>
-          </div>
+          <div><h2>Fiyat alanı</h2></div>
         </div>
+
         <div class="pricing-grid">
           <article class="card price-card">
             <h3>Saç kesimi</h3>
             <div class="price">600 TL</div>
             <p>Temiz ve özenli saç kesimi hizmeti.</p>
           </article>
+
           <article class="card price-card">
             <h3>Sakal kesimi</h3>
             <div class="price">300 TL</div>
             <p>Yüz tipine uygun düzenleme ve şekillendirme.</p>
           </article>
+
           <article class="card price-card">
             <h3>Saç + sakal kesimi</h3>
             <div class="price">900 TL</div>
@@ -479,10 +599,9 @@
     <section class="section" id="yorumlar">
       <div class="container">
         <div class="section-head">
-          <div>
-            <h2>Yorumlar</h2>
-          </div>
+          <div><h2>Yorumlar</h2></div>
         </div>
+
         <div class="reviews-wrap">
           <div class="reviews-track">
             <article class="card review-card">
@@ -514,6 +633,18 @@
               <h3>Uzun süreli müşteri memnuniyeti</h3>
               <p class="muted">Düzenli gelen müşteriler tarafından istikrarlı kalite, özenli işçilik ve güven veren hizmet anlayışı vurgulanıyor.</p>
             </article>
+
+            <article class="card review-card">
+              <div class="stars">★★★★★</div>
+              <h3>İlk ziyarette güven veren hizmet</h3>
+              <p class="muted">İlk kez gelen misafirlerin bile rahat ettiği, ne istediğini kısa anlatınca doğru sonuca ulaşabildiği bir deneyim.</p>
+            </article>
+
+            <article class="card review-card">
+              <div class="stars">★★★★★</div>
+              <h3>Özenli kesim, temiz ortam</h3>
+              <p class="muted">Kesim sürecinde detaylara dikkat edilen, temiz ve sakin atmosferiyle memnuniyet oluşturan bir salon deneyimi.</p>
+            </article>
           </div>
         </div>
       </div>
@@ -529,15 +660,21 @@
             <span>Randevu: <a href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Stylett üzerinden oluştur</a></span>
             <span>Adres: Orhangazi, Rüzgargülü Sokağı No:10, 34903 Pendik / İstanbul</span>
           </div>
+
           <div class="contact-actions" style="margin-top:1rem">
             <a class="btn" href="tel:05462284072">Hemen Ara</a>
             <a class="btn-ghost" href="https://wa.me/905462284072" target="_blank" rel="noopener noreferrer">WhatsApp Aç</a>
             <a class="btn-ghost" href="https://apps.apple.com/tr/app/stylett/id6759827060?l=tr" target="_blank" rel="noopener noreferrer">Stylett Randevu</a>
           </div>
         </article>
+
         <article class="card contact-card">
           <h3>Konum</h3>
-          <iframe title="Kuaför Erkan Kızılaslan konumu" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Orhangazi%20R%C3%BCzgarg%C3%BCl%C3%BC%20Soka%C4%9F%C4%B1%20No%3A10%20Pendik%20Istanbul&output=embed"></iframe>
+          <iframe
+            title="Kuaför Erkan Kızılaslan konumu"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Orhangazi%20R%C3%BCzgarg%C3%BCl%C3%BC%20Soka%C4%9F%C4%B1%20No%3A10%20Pendik%20Istanbul&output=embed"></iframe>
         </article>
       </div>
     </section>
